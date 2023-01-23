@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none; 
+}
+
+:root{
+    --primar_color: blue;
+    --secondary_color: red;
+    --tertiary_color: green;
+    --black: black;
+    --border: 1rem;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+.a{
+    position: relative;
+    width: 100%;
+    height: 110px;
+    margin: var(--border);
+    padding: 3rem;
+    background-color: var(--primar_color);
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+     animation-name: identifier;
+     animation-duration: 5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite; 
+     /* animation: identifier 5s  ;  */
+}
+.a .circle{
+    background-color: white;
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    position: absolute;
+    animation-name: movement;
+    animation-duration: 5s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+}
+
+.b{
+    background-color: var(--secondary_color);
+}
+
+.c{
+    background-color: var(--tertiary_color);
+}
+
+@keyframes identifier {
+    0% {background-color: var(--secondary_color);}
+    25%{background-color: var(--primar_color);}
+    50%{background-color: var(--tertiary_color);}
+    75%{background-color: var(--secondary_color);}
+}
+
+@keyframes movement {
+    0% {top: 0;
+        left: 0;
+        }
+    12.5%{
+        top: 78px;
+        left: 12.5%;
+        }
+    25%{
+        top: 78px;
+        left: 25%;
+        }
+    37.5%{
+        top: 0px;
+        left: 37.5%;
+        }
+    
+    50%{
+        top: 0px;
+        left: 50%;
+       }
+
+       62.5%{top: 78px;
+        left: 62.5%;
+        }
+        
+        75%{top: 78px;
+            left: 75%;
+            }
+
+        87.5%{top: 0px;
+            left: 87.5%;
+            }
+                
+        100%{top: 0px;
+            left: 99%;
+                } 
+}
